@@ -46,4 +46,45 @@ cd [PROJE-ADINIZ]
 
 ### 2. Gerekli Kütüphaneleri Yükleyin
 
-Projenin
+Projenin ihtiyaç duyduğu Python kütüphanelerini yükleyin. (Bir sanal ortam - virtual environment - kullanmanız tavsiye edilir.)
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. API Anahtarını Ayarlayın (Çok Önemli!)
+
+Bu projenin çalışması için bir WeatherAPI anahtarına ihtiyacınız var.
+
+1.  **API Anahtarı Alın:**
+    * [www.weatherapi.com](https://www.weatherapi.com/) adresine gidin ve ücretsiz bir hesap oluşturun.
+    * Giriş yaptıktan sonra size özel API anahtarınızı (API Key) kopyalayın.
+
+2.  **`.env` Dosyası Oluşturun:**
+    * Projenin ana klasöründe (`main.py` dosyasının yanında) `.env` adında **yeni bir dosya** oluşturun.
+
+3.  **Anahtarınızı Ekleyin:**
+    * Oluşturduğunuz bu boş `.env` dosyasını bir metin editörü ile açın.
+    * İçine aşağıdaki satırı ekleyin ve tırnak işaretleri arasına WeatherAPI'den aldığınız kendi anahtarınızı yapıştırın:
+
+    ```
+    WEATHER_API_KEY="KENDI_API_ANAHTARINIZI_BURAYA_YAPISTIRIN"
+    ```
+    *(Not: Projenizdeki `.gitignore` dosyası, `.env` dosyasını içerdiği için bu özel anahtarınız asla GitHub'a yüklenmeyecektir.)*
+
+## 🚀 Kullanım
+
+Tüm ayarları yaptıktan sonra uygulamayı aşağıdaki komutla çalıştırabilirsiniz:
+
+```bash
+python main.py
+```
+
+Sizden bir şehir adı girmeniz istenecek ve ardından hava durumu bilgileri ekrana yazdırılacaktır.
+
+## 💻 Kullanılan Teknolojiler
+
+* **Python 3**
+* **requests:** API istekleri yapmak için.
+* **python-dotenv:** Çevre değişkenlerini (API anahtarı) güvenli bir şekilde yönetmek için.
+* **WeatherAPI:** Hava durumu verilerinin kaynağı.
