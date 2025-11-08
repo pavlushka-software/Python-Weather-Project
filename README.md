@@ -39,14 +39,13 @@ Bu projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izley
 ### 1. Projeyi Klonlayın (veya İndirin)
 
 ```bash
-git clone [https://github.com/pavlushka-software/](https://github.com/pavlushka-software/)[PROJE-ADINIZ].git
-cd [PROJE-ADINIZ]
+git clone https://github.com/pavlushka-software/Python-Weather-Project.git
+cd Python-Weather-Project
 ```
-*(Not: `[PROJE-ADINIZ]` kısmını GitHub'daki depo adınızla değiştirin.)*
 
 ### 2. Gerekli Kütüphaneleri Yükleyin
 
-Projenin ihtiyaç duyduğu Python kütüphanelerini yükleyin. (Bir sanal ortam - virtual environment - kullanmanız tavsiye edilir.)
+Projenin ihtiyaç duyduğu Python kütüphanelerini yükleyin.
 
 ```bash
 pip install -r requirements.txt
@@ -70,7 +69,6 @@ Bu projenin çalışması için bir WeatherAPI anahtarına ihtiyacınız var.
     ```
     WEATHER_API_KEY="KENDI_API_ANAHTARINIZI_BURAYA_YAPISTIRIN"
     ```
-    *(Not: Projenizdeki `.gitignore` dosyası, `.env` dosyasını içerdiği için bu özel anahtarınız asla GitHub'a yüklenmeyecektir.)*
 
 ## 🚀 Kullanım
 
@@ -88,3 +86,4 @@ Sizden bir şehir adı girmeniz istenecek ve ardından hava durumu bilgileri ekr
 * **requests:** API istekleri yapmak için.
 * **python-dotenv:** Çevre değişkenlerini (API anahtarı) güvenli bir şekilde yönetmek için.
 * **WeatherAPI:** Hava durumu verilerinin kaynağı.
+
