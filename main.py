@@ -10,7 +10,7 @@ from dotenv import load_dotenv, dotenv_values
 
 # .env.example dosyasındaki çevre değişkenlerini yükle
 # .env.example dosyasının adını değiştiriseniz burayı da değiştirin. / If you change the name of the .env.example file, change it here as well.
-load_dotenv(dotenv_path=".env.example")
+load_dotenv(dotenv_path=".env")
 
 # Hava Durumu API Anahtarı / Weather API Key
 api_key = os.getenv("WEATHER_API_KEY")
@@ -61,5 +61,6 @@ try:
 # İstek Hatası Durumu / Request Exception Handling
 except requests.exceptions.RequestException as e:
     print(f"İstek sırasında bir hata oluştu: {e}")
+
 
 
